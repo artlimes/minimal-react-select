@@ -9,6 +9,7 @@
 
 .Select {
 	position: relative;
+  margin: 20px 0;
 
 	// preferred box model
 	&,
@@ -31,10 +32,10 @@
 		opacity: 0.35;
 	}
   .select-field-label {
-    color: @select-primary-color;
+    color: @select-label-color;
     font-size: @font-size-medium;
     line-height: 20px;
-    margin: 0;
+    margin-bottom: 4px;
     &.select-field-label-focused {
       color: @select-input-focused-border-color;
       transition: transform 250ms;
@@ -52,8 +53,8 @@
 	border-spacing: 0;
 	border-collapse: separate;
 	// height: @select-input-height;
-  height: 20px;
-  margin: 0;
+  min-height: 26px;
+  padding-bottom: 4px;
 	outline: none;
 	overflow: hidden;
 	position: relative;
@@ -107,7 +108,6 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-
 	// crop text
 	max-width: 100%;
 	overflow: hidden;
@@ -129,6 +129,7 @@
 .required-message {
   color: #D7001A;
   font-size: 12px;
+  float: left;
 }
 
 .Select-value:hover .Select-value-icon, {
@@ -141,7 +142,8 @@
 .has-value.Select--single > .Select-control .Select-value,
 .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value {
 	.Select-value-label {
-    font-size: @font-size-medium
+    font-size: @font-size-base;
+    color: @select-primary-color;
 	}
 	a.Select-value-label {
 		cursor: pointer;
@@ -161,7 +163,7 @@
 	// height: @select-input-internal-height;
 	vertical-align: middle;
 	padding: 0 !important;
-  font-size: @font-size-medium;
+  font-size: @font-size-base;
 
 	> input {
 		width: 100%;
@@ -331,7 +333,7 @@
     border-color: @dark-select-item-border-color !important;
   }
   .Select-value-label {
-    color: @white;
+    color: @white !important;
   }
   &.Select--multi .Select-value-label,
   .Select-value-icon {
