@@ -367,6 +367,7 @@
   cursor: default;
   display: block;
   padding: 8px 10px;
+  background-color: #fff;
 }
 .Select-dark .Select-menu-outer .Select-menu .Select-option {
   color: #fff;
